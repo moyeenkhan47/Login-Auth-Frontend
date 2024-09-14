@@ -1,0 +1,14 @@
+<h2>Unlock Account</h2>
+<form (ngSubmit)="onUnlock()">
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input id="username" type="text" [(ngModel)]="username" name="username" required />
+  </div>
+  
+  <button type="submit">Unlock</button>
+  
+  <!-- Message to show after unlock process -->
+  <div *ngIf="message" class="message">
+    {{ message }}
+  </div>
+</form>
